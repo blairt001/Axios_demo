@@ -31,7 +31,7 @@
                 <div class="panel-heading">GET REQUEST with parameters</div>
                 <div class="panel-body">
 
-                  <input type="text" class="form-control" id="todoId" placeholder="Tdo ID..">
+                  <input type="text" class="form-control" id="todoId" placeholder="Todo ID..">
                   <br />
                         <button class="btn btn-primary" onclick="performGetRequest2()">Get Todos</button>
                         <button class="btn btn-warning" onclick="clearOutput()">Clear</button>
@@ -44,15 +44,16 @@
                                 <form class="form-inline" id="todoInputForm">
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="todoTitle" placeholder="todoTitle..">
-                            </div>
-                           <button type="submit" class="btn btn-primary">Send</button>
+                                    </div>
+                            <br />
+                           <button type="submit" onclick="performPostRequest()" class="btn btn-primary">Send</button>
                             </form>
                             <br />
-                            <button class="btn btn-warning"onclick="clearOutput()">Clear</button>
+                            <button class="btn btn-warning" onclick="clearOutput()">Clear</button>
                             <div class="panel-body" id="postResult"></div>
                         </div>
                         </div>
-                
+              
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     </div>
