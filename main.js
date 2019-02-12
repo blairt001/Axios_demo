@@ -1,4 +1,5 @@
- function performGetRequest1(){
+
+function performGetRequest1(){
  	var resultElement = document.getElementById('getResult1');
  	resultElement.innerHTML = '';
 
@@ -9,14 +10,13 @@
  	     .catch(function(error){
  	     	resultElement.innerHTML = generateErrorHTMLOutput(error);
  	     });
-
  }
  function generateSuccessHTMLOutput(response){
  	return '<h4>Result:</h4>' + 
- 	       '<h4>Result:</h4>' +
- 	       '<pre>' + response.status + ' ' + response.statusText + '</pre>'
+ 	       '<h4>Status:</h4>' +
+ 	       '<pre>' + response.status + ' ' + response.statusText + '</pre>',
  	       '<h5>Headers:</h5>' + 
- 	       '<pre> + JSON.stringify(response.headers, null, '\t') + </pre>'
+ 	       '<pre>' + JSON.stringify(response.headers, null, '\t') + '</pre>',
  	       '<h5>Data</h5>' + 
- 	       '<pre> + JSON.stringify(response.data, null, '\t') + </pre>'
+ 	       '<pre>' + JSON.stringify(response.data, null, '\t') + '</pre>'
  	        }
